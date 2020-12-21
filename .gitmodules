@@ -1,0 +1,3 @@
+[submodule "spring-petclinic-reactjs"]
+	path = spring-petclinic-reactjs
+	url = git@github.com:spring-petclinic/spring-petclinic-reactjs.git
