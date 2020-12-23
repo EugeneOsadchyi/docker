@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  back:
+    build:
+      dockerfile: ./back/Dockerfile
+      context: .
+    image: petclinic-back
+    networks:
+      - petclinic
+  front:
+    build:
+      dockerfile: ./front/Dockerfile
+      context: .
+    image: petclinic-front
+    ports:
+      - "8080:80"
+    networks:
+      - petclinic
+networks:
+  petclinic: {}
