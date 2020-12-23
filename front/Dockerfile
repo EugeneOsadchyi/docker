@@ -11,5 +11,5 @@ COPY spring-petclinic-reactjs/client/ .
 RUN npm run build:prod
 
 FROM nginx:latest
-COPY front/.nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY front/.nginx/nginx.conf /etc/nginx/nginx.conf
 COPY --from=front-end-build /tmp/spring-petclinic-reactjs/public /usr/share/nginx/html
